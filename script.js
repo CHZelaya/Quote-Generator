@@ -68,7 +68,7 @@ function newQuote() {
     } else {
       authorText.textContent = quote.author;
 
-      //! Check quote Length to determine styling
+      //! Change styling based on quote length
     } if (quote.text.length > 120) {
       quoteText.classList.add("long-quote");
 
@@ -103,7 +103,7 @@ async function getQuotes() {
 }
 
 
-// -> Tweet a Quote 
+//-> Tweet a Quote 
 function tweetQuote() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
   return window.open(twitterUrl, '_blank');
